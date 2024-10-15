@@ -3,12 +3,13 @@ import 'dart:math';
 class Circle {
   double _radius = 0;
 
-  // Circle(double radius) {
-  //   _radius = radius;
-  // }
-  set radius(double radius) {
-    radius = 7;
-    _radius = radius;
+  Circle() {
+    // _radius = radius;
+  }
+
+  set radius(double _radius) {
+    // radius = 7;
+    _radius = 7;
   }
   double get radius => _radius;
 
