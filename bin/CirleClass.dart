@@ -6,8 +6,9 @@ class Circle {
   Circle(double radius) {
     _radius = radius;
   }
-
+  
   double get radius => _radius;
+  set radius(double radius) => radius = 7; 
 
   double getArea() {
     double _area = pi * pow(_radius, 2);
