@@ -18,12 +18,12 @@ class Circle {
     double _perimeter = 2 * pi * _radius;
     return _perimeter;
   }
-  
+
 
 
   @override
   String toString() {
     // TODO: implement toString
-    return '$_radius';
+    return 'THe radius is $_radius';
   }
 }
