@@ -13,7 +13,7 @@ class PasswordCheck {
     String i = _password.substring(0, 1);
     String j = _password.substring(1, 2);
     String k = _password.substring(_passwordLength - 3, (_passwordLength - 2));
-    String l = _password.substring(_passwordLength - 2, _passwordLength - 1);
+    String l = _password.substring(_passwordLength - 2, (_passwordLength - 1));
 
     String ShowHidePassword = i + j + (('*') * _hidePassword) + k + l;
     return ShowHidePassword;
