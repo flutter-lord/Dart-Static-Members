@@ -14,7 +14,7 @@ void main() {
   print('The number of student here is ${Student.numberOfStudent}');
   student3.canStudentApplyForWAEC();
 
-  final student4 = Student.defaultStudent();
+  final student4 = Student.defaultStudent(); 
 
 
 }
