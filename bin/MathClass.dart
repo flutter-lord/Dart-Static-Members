@@ -9,6 +9,6 @@ class Math {
   @override
   String toString() {
     // TODO: implement toString
-    return '${max(2, 3)}\n${min(2, 3)}';
+    return 'The value for a = ${max(2, 3)} and b = ${min(2, 3)}';
   }
 }
