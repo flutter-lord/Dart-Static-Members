@@ -3,15 +3,15 @@ import 'dart:math';
 class Circle {
   double _radius = 0;
 
-  Circle() {
-    // _radius = radius;
+  Circle(double radius) {
+    _radius = radius;
   }
 
   set radius(double _radius) {
-    // radius = 7;
+    radius = 7;
     _radius = 7;
   }
-  double get radius => _radius;
+  //double get radius => _radius;
 
   double getArea() {
     double _area = pi * pow(_radius, 2);
