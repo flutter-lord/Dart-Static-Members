@@ -52,7 +52,7 @@ class Security {
   }
 
   bool containsSymbols() {
-    String _symbols = '!@#%^&*|?><,./';
+    String _symbols = '!@#%^&*|?></';
     int _symbolLength = _symbols.length;
     bool? _checkSymbols;
 
