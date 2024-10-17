@@ -14,7 +14,7 @@ class Security {
   bool containsNumbers() {
     String _numbers = '0123456789';
     int _numbersLength = _numbers.length - 1;
-    bool ? _checkNumber;
+    bool? _checkNumber;
 
     for (int i = 0; i <= _numbersLength;) {
       String a = _numbers.substring(i, i + 1); 
@@ -30,11 +30,25 @@ class Security {
     return (_checkNumber!) ? true : false; 
   }
 
-  void containsAlphabet() {
+  bool containsAlphabet() {
     String _alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
     int _alphabetLength = _alphabet.length - 1;
+    bool? _checkAlphabet;
 
-    //return (_checkAlphabet) ? true : false;
+    for (int i = 0; i <= _alphabetLength;) {
+      String a = _alphabet.substring(i, i + 1); 
+      _checkAlphabet = _password.contains(a); 
+
+      if (_checkAlphabet == false) {
+       i++;
+      }
+      else {
+        return _checkAlphabet = true;
+      }
+    }
+    return (_checkAlphabet!) ? true : false; 
+
+
   }
 
   bool containsSymbols() {
@@ -44,7 +58,7 @@ class Security {
   }
 
   String output() {
-    if (countPassword() == true && containsNumbers() == true) {
+    if (countPassword() == true && containsNumbers() == true && containsAlphabet() == true) {
       return 'The password you entered is valid';
     }
     else {

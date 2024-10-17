@@ -10,7 +10,7 @@ void main() {
 
   print(security);
   print(security.countPassword());
- // print(security.containsAlphabet());
+  print(security.containsAlphabet());
   print(security.containsNumbers());
   //print(security.containsSymbols());
   print(security.output());
