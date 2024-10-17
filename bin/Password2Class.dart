@@ -86,7 +86,14 @@ class Security {
   }
 
   String hidePassword() {
-    String _hidddenCharacters = '*' * (_password.length - 4);
+    String _hidddenCharacters = '';
+   if (_password.length > 4) {
+     _hidddenCharacters = '*' * (_password.length - 4);
+   }
+
+   else {
+    _hidddenCharacters = '*' * (_password.length - 2);
+   }
 
     String _firstCharacter = _password.substring(0, 1);
     String _secondCharacter = _password.substring(1, 2);

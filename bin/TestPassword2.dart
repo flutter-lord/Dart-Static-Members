@@ -8,9 +8,9 @@ void main() {
 
   Security security = Security(password);
   
-  print(security.countPassword());
-  print(security.containsNumbers());
-  print(security.containsAlphabet());
-  print(security.containsSymbols());
+  // print(security.countPassword());
+  // print(security.containsNumbers());
+  // print(security.containsAlphabet());
+  // print(security.containsSymbols());
   print(security.output());
 }
