@@ -1,10 +1,10 @@
 class Security {
+
   String _password = '';
 
   Security(this._password);
 
   String get password => _password = password;
-
 
   bool countPassword() {
     bool _passwordLength = (_password.length >= 8 && _password.length <= 16);
@@ -87,20 +87,27 @@ class Security {
 
   String hidePassword() {
     String _hidddenCharacters = '';
-   if (_password.length > 4) {
+   if (countPassword() == true) {
      _hidddenCharacters = '*' * (_password.length - 4);
    }
 
+   else if (_password.length < 8) {
+    print('Your Password cannot be less than 8 characters ');
+   }
    else {
-    _hidddenCharacters = '*' * (_password.length - 2);
+    print('Your password cannot be greater than 16');
    }
 
     String _firstCharacter = _password.substring(0, 1);
-    String _secondCharacter = _password.substring(1, 2);
+    String  _secondCharacter = _password.substring(1, 2);
     String _secondToLast = _password.substring(_password.length - 2, _password.length - 1);
-    String lastCharacter = _password.substring(_password.length - 1, _password.length);
+    String  lastCharacter = _password.substring(_password.length - 1, _password.length);
 
-    String _totalPassword = _firstCharacter + _secondCharacter + _hidddenCharacters + _secondToLast + lastCharacter;
+    String _totalPassword = '';
+
+    if (countPassword() == true) {
+      _totalPassword = _firstCharacter + _secondCharacter + _hidddenCharacters + _secondToLast + lastCharacter;
+    }
 
     return _totalPassword; 
   }
