@@ -14,12 +14,14 @@ class Security {
   bool containsNumbers() {
     String _numbers = '0123456789';
     int _numbersLength = _numbers.length - 1;
-    bool _checkNumber = true;
+    bool _checkNumber = false;
 
     for (int i = 0; i <= _numbersLength; i++ ) {
       String a = _numbers.substring(i, i + 1);
 
-      _checkNumber = _password.contains(a); 
+      while (_checkNumber != true) {
+       _checkNumber = _password.contains(a); 
+      }
     }
     return (_checkNumber) ? true : false; 
   }

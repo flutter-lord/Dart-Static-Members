@@ -13,4 +13,5 @@ void main() {
  // print(security.containsAlphabet());
   print(security.containsNumbers());
   //print(security.containsSymbols());
+  print(security.output());
 }
