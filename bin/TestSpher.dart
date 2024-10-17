@@ -5,6 +5,8 @@ void main() {
 
   print(sphere);
 
+  print('${sphere.area}\n${sphere.volume}');
+
 
 
 }
