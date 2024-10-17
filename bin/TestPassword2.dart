@@ -12,5 +12,5 @@ void main() {
   // print(security.containsNumbers());
   // print(security.containsAlphabet());
   // print(security.containsSymbols());
-  print(security.output());
+  print('${security.output()}');
 }

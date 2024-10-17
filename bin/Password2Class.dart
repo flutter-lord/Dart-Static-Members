@@ -92,10 +92,12 @@ class Security {
    }
 
    else if (_password.length < 8) {
-    print('Your Password cannot be less than 8 characters ');
+    print('Your Password cannot be less than 8 characters');
+    print('Try entering 8 - 16 characters');
    }
    else {
     print('Your password cannot be greater than 16');
+    print('Try entering 8 - 16 characters');
    }
 
     String _firstCharacter = _password.substring(0, 1);
