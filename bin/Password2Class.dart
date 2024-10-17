@@ -23,6 +23,11 @@ class Security {
       if (_checkNumber == false) {
        i++;
       }
+
+      else if (i == _numbersLength && _checkNumber == false) {
+        return _checkNumber = false;
+      }
+
       else {
         return _checkNumber = true;
       }
@@ -42,6 +47,11 @@ class Security {
       if (_checkAlphabet == false) {
        i++;
       }
+
+      else if (i == _alphabetLength && _checkAlphabet == false) {
+        return _checkAlphabet = false;
+      } 
+
       else {
         return _checkAlphabet = true;
       }
@@ -67,6 +77,7 @@ class Security {
       else if (i == _symbolLength && _checkSymbols == false) {
         return _checkSymbols = false;
       }
+
       else {
         return _checkSymbols = true;
       }
