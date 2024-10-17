@@ -63,6 +63,10 @@ class Security {
       if (_checkSymbols == false) {
        i++;
       }
+
+      else if (i == _symbolLength && _checkSymbols == false) {
+        return _checkSymbols = false;
+      }
       else {
         return _checkSymbols = true;
       }
