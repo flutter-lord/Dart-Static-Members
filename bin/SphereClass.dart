@@ -3,16 +3,16 @@ import 'dart:math';
 class Sphere {
   double _radius = 0;
 
-  Sphere(double _radius);
+  Sphere(this._radius);
 
-  double get volume => pi * pow(_radius, 2);
-  double get surfaceArea => 2 * pi * _radius;
+  set (double radius) => _radius = radius;
+
+  double get area => pi * pow(_radius, 2);
+  double get volume => 2 * pi * _radius;
 
   @override
   String toString() {
     // TODO: implement toString
-    return 'The  vaue of radius is $_radius';
+    return '$_radius';
   }
-
-
 }
