@@ -117,7 +117,7 @@ class Security {
       return 'Your password ${hidePassword()} that you entered is valid';
     }
     else {
-      return 'The password ${hidePassword()} that you entered is not valid';
+      return 'Your password ${hidePassword()} that you entered is not valid';
     }
   }
 
