@@ -7,11 +7,10 @@ void main() {
   String password = stdin.readLineSync()!;
 
   Security security = Security(password);
-
-  print(security);
+  
   print(security.countPassword());
   print(security.containsAlphabet());
   print(security.containsNumbers());
-  //print(security.containsSymbols());
+  print(security.containsSymbols());
   print(security.output());
 }

@@ -52,24 +52,50 @@ class Security {
   }
 
   bool containsSymbols() {
-    String _symbols = '!@#%^&*?|??/';
-    bool _checkSymbols = _password.contains(_symbols);
-    return (_checkSymbols) ? true : false;
+    String _symbols = '!@#%^&*|?><,./';
+    int _symbolLength = _symbols.length;
+    bool? _checkSymbols;
+
+    for (int i = 0; i <= _symbolLength;) {
+      String a = _symbols.substring(i, i + 1); 
+      _checkSymbols = _password.contains(a); 
+
+      if (_checkSymbols == false) {
+       i++;
+      }
+      else {
+        return _checkSymbols = true;
+      }
+    }
+    return (_checkSymbols!) ? true : false;
+  }
+
+  String hidePassword() {
+    String _hidddenCharacters = '*' * (_password.length - 4);
+
+    String _firstCharacter = _password.substring(0, 1);
+    String _secondCharacter = _password.substring(1, 2);
+    String _secondToLast = _password.substring(_password.length - 2, _password.length - 1);
+    String lastCharacter = _password.substring(_password.length - 1, _password.length);
+
+    String _totalPassword = _firstCharacter + _secondCharacter + _hidddenCharacters + _secondToLast + lastCharacter;
+
+    return _totalPassword; 
   }
 
   String output() {
-    if (countPassword() == true && containsNumbers() == true && containsAlphabet() == true) {
-      return 'The password you entered is valid';
+    if (countPassword() == true && containsNumbers() == true && containsAlphabet() == true && containsSymbols() == true) {
+      return 'Your password ${hidePassword()} that you entered is valid';
     }
     else {
-      return 'The password you entered is not valid';
+      return 'The password ${hidePassword()} that you entered is not valid';
     }
   }
 
   @override
   String toString() {
     // TODO: implement toString
-    return '$_password';
+    return '$output()';
   }
 
 
