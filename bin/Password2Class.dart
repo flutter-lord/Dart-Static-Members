@@ -58,7 +58,6 @@ class Security {
     }
     return (_checkAlphabet!) ? true : false; 
 
-
   }
 
   bool containsSymbols() {
@@ -88,23 +87,20 @@ class Security {
   String hidePassword() {
     String _hidddenCharacters = '';
 
+     String _totalPassword = '';
+
    if (countPassword() == true) {
      _hidddenCharacters = '*' * (_password.length - 4);
-   }
 
+     String _firstCharacter = _password.substring(0, 1);
+     String  _secondCharacter = _password.substring(1, 2);
+     String _secondToLast = _password.substring(_password.length - 2, _password.length - 1);
+     String  lastCharacter = _password.substring(_password.length - 1, _password.length);
 
-    String _firstCharacter = _password.substring(0, 1);
-    String  _secondCharacter = _password.substring(1, 2);
-    String _secondToLast = _password.substring(_password.length - 2, _password.length - 1);
-    String  lastCharacter = _password.substring(_password.length - 1, _password.length);
+     _totalPassword = _firstCharacter + _secondCharacter + _hidddenCharacters + _secondToLast + lastCharacter;
 
-    String _totalPassword = '';
-
-    if (countPassword() == true) {
-      _totalPassword = _firstCharacter + _secondCharacter + _hidddenCharacters + _secondToLast + lastCharacter;
     }
-
-    return _totalPassword; 
+     return _totalPassword; 
   }
 
   String output() {
