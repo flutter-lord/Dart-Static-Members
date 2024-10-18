@@ -4,8 +4,6 @@ class Security {
 
   Security(this._password);
 
-  // String get password => _password = password;
-
   bool countPassword() {
     bool _passwordLength = (_password.length >= 8 && _password.length <= 16);
     return (_passwordLength) ? true : false;
