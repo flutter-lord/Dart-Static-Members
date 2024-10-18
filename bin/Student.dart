@@ -34,6 +34,5 @@ class Student {
     return 'Student(id = $_id, name = $_name, age = $_age, department = $_department)';
   }
 
-
-
+  
 }
