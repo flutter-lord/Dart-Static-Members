@@ -114,18 +114,17 @@ class Security {
 
     else if (_password.length < 8) {
      print('Your Password cannot be less than 8 characters');
-     print('Try entering 8 - 16 characters');
+     return 'Try entering 8 - 16 characters';
    }
 
    else if (_password.length > 16){
      print('Your password cannot be greater than 16');
-     print('Try entering 8 - 16 characters');
+     return 'Try entering 8 - 16 characters';
    }
 
-    else if (countPassword() == true && (containsNumbers() == true || false) && (containsAlphabet() == true || false) && (containsSymbols() == true || false)) {
-      return 'Your password ${hidePassword()} that you entered is not valid';
-    }
-    return 'n';
+   else {
+    return 'Your password ${hidePassword()} that you entered is not valid';
+   }
   }
 
   @override
