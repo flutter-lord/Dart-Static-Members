@@ -87,17 +87,8 @@ class Security {
 
   String hidePassword() {
     String _hidddenCharacters = '';
-   if (_password.length < 8) {
-    print('Your Password cannot be less than 8 characters');
-    print('Try entering 8 - 16 characters');
-   }
 
-   else if {
-    print('Your password cannot be greater than 16');
-    print('Try entering 8 - 16 characters');
-   }
-
-   else {
+   if (countPassword() == true) {
      _hidddenCharacters = '*' * (_password.length - 4);
    }
 
@@ -120,12 +111,21 @@ class Security {
     if (countPassword() == true && containsNumbers() == true && containsAlphabet() == true && containsSymbols() == true) {
       return 'Your password ${hidePassword()} that you entered is valid';
     }
+
+    else if (_password.length < 8) {
+     print('Your Password cannot be less than 8 characters');
+     print('Try entering 8 - 16 characters');
+   }
+
+   else if (_password.length > 16){
+     print('Your password cannot be greater than 16');
+     print('Try entering 8 - 16 characters');
+   }
+
     else if (countPassword() == true && (containsNumbers() == true || false) && (containsAlphabet() == true || false) && (containsSymbols() == true || false)) {
       return 'Your password ${hidePassword()} that you entered is not valid';
     }
-    else {
-      return 'None';
-    }
+    return 'n';
   }
 
   @override
