@@ -5,8 +5,6 @@ class Circular {
 
   Circular(this._radius);
 
-  double get radius => _radius;
-
   double getArea() {
     double _area = pi * pow(_radius, 2);
     return _area;
