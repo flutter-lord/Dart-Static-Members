@@ -15,6 +15,6 @@ class StudentInfo {
   @override
   String toString() {
     // TODO: implement toString
-    return '';
+    return 'Student(FirstName: $_firstName, LastName: $_lastName, grade: $_grade)';
   }
 }
