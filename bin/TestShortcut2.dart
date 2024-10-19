@@ -6,7 +6,11 @@ void main() {
 
   print(positiveNumber(_number));
 
-  print(positiveNumber(null));
+  //print(positiveNumber(null));
+
+  String? _name;
+  _name = 'ray';
+  print(_name.length);
 
 }
 
