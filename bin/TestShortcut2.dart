@@ -4,7 +4,7 @@ void main() {
   stdout.write('Enter your number: ');
   int _number = int.parse(stdin.readLineSync()!); 
 
-   String? _name;
+  String? _name;
   _name = 'ray';
 
 
