@@ -10,7 +10,7 @@ void main() {
 
 }
 
-bool positiveNumber(_number) {
+bool positiveNumber(dynamic _number) {
   bool _positive = !(_number.isNegative);
   return _positive;
 }
