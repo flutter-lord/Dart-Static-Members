@@ -2,7 +2,7 @@ import 'dart:io';
 
 void main() {
   stdout.write('Enter your number: ');
-  dynamic _number = int.parse(stdin.readLineSync()!); 
+  int _number = int.parse(stdin.readLineSync()!); 
 
   print(positiveNumber(_number));
 
