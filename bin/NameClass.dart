@@ -12,7 +12,7 @@ class Name {
   }
 
   String nameOrder() {
-    return'${_surname! + '' + _givenName} ';
+    return'${_surname! + ' ' + _givenName} ';
   }
   String output() {
     if (_surname == null) {
