@@ -29,7 +29,5 @@ class Name {
     // TODO: implement toString
     return '${output()}';
   }
-
   
-
 }
