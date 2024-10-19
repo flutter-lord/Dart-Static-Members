@@ -1,6 +1,8 @@
+//import 'package:dart_static_members/Shortcut.dart';
+
 import 'Shortcut.dart';
 
-void main() {
-  print('${max(3, 2)}\n${min(3, 2)}');
 
+void main() {
+   print('${max(2, 3)}');
 }
