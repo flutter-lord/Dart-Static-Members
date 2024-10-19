@@ -1,4 +1,5 @@
 class MyUser {
-  String? name;
-  int? id; 
+
+  String? _name;
+  int? _id; 
 }
