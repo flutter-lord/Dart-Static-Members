@@ -37,5 +37,12 @@ void main() {
   + q + r + s + t + u + v + w + x + y + z;
 
   print(sum);
+
+  int ba = 0;
+
+  for (int i = 1; i <= 26; i++) {
+    ba += 1;
+  }
+  print(ba);
   
 }
