@@ -4,12 +4,12 @@ void main() {
   stdout.write('Enter your number: ');
   int _number = int.parse(stdin.readLineSync()!); 
 
+   String? _name;
+  _name = 'ray';
+
+
   print(positiveNumber(_number));
 
-  //print(positiveNumber(null));
-
-  String? _name;
-  _name = 'ray';
   print(_name.length);
 
 }
