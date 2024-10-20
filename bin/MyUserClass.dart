@@ -1,16 +1,16 @@
 class MyUser {
 
-  String name = '';
-  int id = 0;
-  String department = '';
-  String? hubby = '';
+  String _name = '';
+  int _id = 0;
+  String _department = '';
+  String? _hubby = '';
 
-  MyUser(this.name, this.id, this.department, [this.hubby]);
+  MyUser(this._name, this._id, this._department, [this._hubby]);
 
 
   @override
   String toString() {
     // TODO: implement toString
-    return 'User(name: $name, id: $id, department: $department, Hubby: $hubby';
+    return 'User(name: $_name, id: $_id, department: $_department, Hubby: $_hubby';
   }
 }
