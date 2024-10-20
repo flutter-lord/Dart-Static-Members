@@ -1,5 +1,5 @@
 class MyUser {
 
-  String? _name;
-  int? _id; 
+  String _name = '';
+  int _id = 0; 
 }
