@@ -11,6 +11,6 @@ class MyUser {
   @override
   String toString() {
     // TODO: implement toString
-    return 'User(name: $name, id: $id, department: $department, ${['Hubby: $hubby']})';
+    return 'User(name: $name, id: $id, department: $department, Hubby: $hubby';
   }
 }
