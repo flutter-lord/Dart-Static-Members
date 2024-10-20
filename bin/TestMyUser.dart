@@ -1,6 +1,7 @@
 import 'MyUserClass.dart';
 
 void main() {
-  MyUser? myuser;
-  
+  MyUser myUser = MyUser(name: 'Lanre', id: 225252, department: 'Information Systems');
+
+  print(myUser);
 }
