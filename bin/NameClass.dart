@@ -15,8 +15,8 @@ class Name {
     return'${_surname! + ' ' + _givenName} ';
   }
   String output() {
-    if (_surname == null) {
-      return _givenName;
+    if (_surname == true) {
+      return _surname ?? _givenName;
     }
 
     else {
