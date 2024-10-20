@@ -1,20 +1,16 @@
 class MyUser {
 
-  String name;
-  int id;
-  String department;
-  //String? hubby = '';
+  String name = '';
+  int id = 0;
+  String department = '';
+  String? hubby = '';
 
-  MyUser({required this.name, required this.id, required this.department});
-
-  String userInfo() {
-    return 'User(name: $name, id: $id, department: $department)';
-  }
-
+  MyUser(this.name, this.id, this.department, [this.hubby]);
+  
 
   @override
   String toString() {
     // TODO: implement toString
-    return userInfo();
+    return 'User(name: $name, id: $id, department: $department)';
   }
 }
