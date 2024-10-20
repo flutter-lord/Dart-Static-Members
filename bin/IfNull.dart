@@ -1,7 +1,7 @@
 void main() {
 
   String? _name;
-  String _name2 = _name?? 'Lanre';
+   _name??= 'Lanre';
 
-  print(_name2);  
+  print(_name);  
 }
