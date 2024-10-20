@@ -16,7 +16,7 @@ class Name {
   }
   String output() {
     if (_surname == true) {
-      return _surname ?? _givenName;
+      return _surname ??= _givenName;
     }
 
     else {
