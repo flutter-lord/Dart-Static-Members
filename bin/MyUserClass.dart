@@ -1,5 +1,11 @@
 class MyUser {
 
-  String _name = '';
-  int _id = 0; 
+  String? name = '';
+  int? id = 0; 
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return '';
+  }
 }
