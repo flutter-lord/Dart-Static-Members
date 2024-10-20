@@ -1,5 +1,5 @@
 class Name {
-  
+
   String _givenName = '';
   String? _surname = '';
 
@@ -12,17 +12,13 @@ class Name {
     return _checkSurname;
   }
 
-  String nameOrder() {
-    return'${_surname! + ' ' + _givenName} ';
-  }
-
   String output() {
     if (_surname == true) {
-      return _surname ?? _givenName;
+      return _surname ?? 'EmptySurname';
     }
 
     else {
-      return '${nameOrder()}';
+      return '${_surname! + ' ' + _givenName}';
     }
   }
 
