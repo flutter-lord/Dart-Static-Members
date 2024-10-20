@@ -3,7 +3,7 @@ class MyUser {
   String _name = '';
   int _id = 0;
   String _department = '';
-  String? _hubby = '';
+  String ?_hubby;
 
   MyUser(this._name, this._id, this._department, [this._hubby]);
 
