@@ -1,4 +1,5 @@
 class Name {
+  
   String _givenName = '';
   String? _surname = '';
 
@@ -14,6 +15,7 @@ class Name {
   String nameOrder() {
     return'${_surname! + ' ' + _givenName} ';
   }
+
   String output() {
     if (_surname == true) {
       return _surname ?? _givenName;
