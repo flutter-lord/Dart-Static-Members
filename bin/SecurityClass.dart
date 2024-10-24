@@ -116,9 +116,7 @@ class Security {
      return 'Try entering 8 - 16 characters';
    }
 
-   else {
     return 'Your password ${hidePassword()} that you entered is not valid';
-   }
   }
 
   @override
