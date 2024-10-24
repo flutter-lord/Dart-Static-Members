@@ -23,11 +23,11 @@ class Security {
       }
 
       else if (i == numbersLength && checkNumber == false) {
-        return checkNumber = false;
+        return false;
       }
 
       else {
-        return checkNumber = true;
+        return true;
       }
     }
     return (checkNumber) ? true : false; 
