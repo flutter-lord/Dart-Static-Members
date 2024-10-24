@@ -102,7 +102,9 @@ class Security {
   }
 
   String output() {
-    if (isPasswordLengthValid() == true && passwordContainNumbers() == true && passwordContainAlphabet() == true && passwordContainSymbols() == true) {
+    if (isPasswordLengthValid() == true && passwordContainNumbers() == true && passwordContainAlphabet() == true 
+     && passwordContainSymbols() == true) {
+
       return 'Your password ${hidePassword()} that you entered is valid';
     }
 
