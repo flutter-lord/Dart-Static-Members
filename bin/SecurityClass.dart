@@ -4,105 +4,105 @@ class Security {
 
   Security(this._password);
 
-  bool countPassword() {
-    bool _passwordLength = (_password.length >= 8 && _password.length <= 16);
-    return (_passwordLength) ? true : false;
+  bool isPasswordLengthValid() {
+    bool passwordLength = (_password.length >= 8 && _password.length <= 16);
+    return (passwordLength) ? true : false;
   }
 
-  bool containsNumbers() {
-    String _numbers = '0123456789';
-    int _numbersLength = _numbers.length - 1;
-    bool? _checkNumber;
+  bool passwordContainNumbers() {
+    String numbers = '0123456789';
+    int numbersLength = numbers.length - 1;
+    var checkNumber;
 
-    for (int i = 0; i <= _numbersLength;) {
-      String a = _numbers.substring(i, i + 1); 
-      _checkNumber = _password.contains(a); 
+    for (int i = 0; i <= numbersLength;) {
+      String a = numbers.substring(i, i + 1); 
+      checkNumber = _password.contains(a); 
 
-      if (_checkNumber == false) {
+      if (checkNumber == false) {
        i++;
       }
 
-      else if (i == _numbersLength && _checkNumber == false) {
-        return _checkNumber = false;
+      else if (i == numbersLength && checkNumber == false) {
+        return checkNumber = false;
       }
 
       else {
-        return _checkNumber = true;
+        return checkNumber = true;
       }
     }
-    return (_checkNumber!) ? true : false; 
+    return (checkNumber) ? true : false; 
   }
 
-  bool containsAlphabet() {
-    String _alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
-    int _alphabetLength = _alphabet.length - 1;
-    bool? _checkAlphabet;
+  bool passwordContainAlphabet() {
+    String alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz';
+    int alphabetLength = alphabet.length - 1;
+    var checkAlphabet;
 
-    for (int i = 0; i <= _alphabetLength;) {
-      String a = _alphabet.substring(i, i + 1); 
-      _checkAlphabet = _password.contains(a); 
+    for (int i = 0; i <= alphabetLength;) {
+      String a = alphabet.substring(i, i + 1); 
+      checkAlphabet = _password.contains(a); 
 
-      if (_checkAlphabet == false) {
+      if (checkAlphabet == false) {
        i++;
       }
 
-      else if (i == _alphabetLength && _checkAlphabet == false) {
-        return _checkAlphabet = false;
+      else if (i == alphabetLength && checkAlphabet == false) {
+        return checkAlphabet = false;
       } 
 
       else {
-        return _checkAlphabet = true;
+        return checkAlphabet = true;
       }
     }
-    return (_checkAlphabet!) ? true : false; 
+    return (checkAlphabet) ? true : false; 
 
   }
 
-  bool containsSymbols() {
-    String _symbols = '!@#%^&*|?></';
-    int _symbolLength = _symbols.length;
-    bool? _checkSymbols;
+  bool passwordContainSymbols() {
+    String symbols = '!@#%^&*|?></';
+    int symbolLength = symbols.length;
+    var checkSymbols;
 
-    for (int i = 0; i <= _symbolLength;) {
-      String a = _symbols.substring(i, i + 1); 
-      _checkSymbols = _password.contains(a); 
+    for (int i = 0; i <= symbolLength;) {
+      String a = symbols.substring(i, i + 1); 
+      checkSymbols = _password.contains(a); 
 
-      if (_checkSymbols == false) {
+      if (checkSymbols == false) {
        i++;
       }
 
-      else if (i == _symbolLength && _checkSymbols == false) {
-        return _checkSymbols = false;
+      else if (i == symbolLength && checkSymbols == false) {
+        return checkSymbols = false;
       }
 
       else {
-        return _checkSymbols = true;
+        return checkSymbols = true;
       }
     }
-    return (_checkSymbols!) ? true : false;
+    return (checkSymbols) ? true : false;
   }
 
   String hidePassword() {
-    String _hidddenCharacters = '';
+    String hidddenCharacters = '';
 
-     String _totalPassword = '';
+    String totalPassword = '';
 
-   if (countPassword() == true) {
-     _hidddenCharacters = '*' * (_password.length - 4);
+   if (isPasswordLengthValid() == true) {
+     hidddenCharacters = '*' * (_password.length - 4);
 
-     String _firstCharacter = _password.substring(0, 1);
-     String  _secondCharacter = _password.substring(1, 2);
-     String _secondToLast = _password.substring(_password.length - 2, _password.length - 1);
+     String firstCharacter = _password.substring(0, 1);
+     String  secondCharacter = _password.substring(1, 2);
+     String secondToLast = _password.substring(_password.length - 2, _password.length - 1);
      String  lastCharacter = _password.substring(_password.length - 1, _password.length);
 
-     _totalPassword = _firstCharacter + _secondCharacter + _hidddenCharacters + _secondToLast + lastCharacter;
+     totalPassword = firstCharacter + secondCharacter + hidddenCharacters + secondToLast + lastCharacter;
 
     }
-     return _totalPassword; 
+    return totalPassword; 
   }
 
   String output() {
-    if (countPassword() == true && containsNumbers() == true && containsAlphabet() == true && containsSymbols() == true) {
+    if (isPasswordLengthValid() == true && passwordContainNumbers() == true && passwordContainAlphabet() == true && passwordContainSymbols() == true) {
       return 'Your password ${hidePassword()} that you entered is valid';
     }
 
