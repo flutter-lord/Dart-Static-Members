@@ -5,8 +5,8 @@ class Security {
   Security(this._password);
 
   bool isPasswordLengthValid() {
-    bool passwordLength = (_password.length >= 8 && _password.length <= 16);
-    return (passwordLength) ? true : false;
+    return _password.length >= 8 && _password.length <= 16;
+  //   return (passwordLength) ? true : false;
   }
 
   bool passwordContainNumbers() {
@@ -126,6 +126,5 @@ class Security {
     // TODO: implement toString
     return '$output()';
   }
-
 
 }
